@@ -1,0 +1,323 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Changa', sans-serif;
+    background: linear-gradient(135deg);
+    background-image: url('backg.jpg');
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.circulars-heading {
+    position: relative; /* Ensures it layers above the pseudo-element */
+    font-size: 3rem; /* Matches earlier font size */
+    background: linear-gradient(135deg, #f9db63, #ff6f61); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 1cm 0; /* Space above and below the heading */
+    z-index: 1; /* Higher than the pseudo-element */
+    text-transform: uppercase; /* Optional: Make the text uppercase */
+}
+
+/* Second background image with inset */
+body::before {
+    content: ''; /* Pseudo-element for the second background */
+    position: absolute;
+    top: 0; /* Start at the top of the page */
+    bottom: 0; /* Extend to the bottom of the page */
+    left: 2cm; /* 2cm space on the left */
+    right: 2cm; /* 2cm space on the right */
+    background-image: url('purple.jpg'); /* Replace with your second background image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    border-radius: 10px;
+}
+/* Team section styling */
+#team {
+    position: relative; /* Keep content above the background */
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 2cm auto; /* Adjust the margin to center it within the second background */
+    max-width: 80%; /* Restrict width to fit inside the second background */
+}
+
+#team h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Adds a background to the text for readability */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+/* Scrolling Notification Bar */
+.notification-bar {
+    position: fixed;
+    top: 10px; /* Adjusted to prevent overlap with the heading */
+    width: 100%;
+    color: red;
+    background: none; /* Removed background box */
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Main container for circulars */
+.circulars-container {
+    text-align: center;
+    width: 80%;
+    margin-top: 60px; /* Adjusted margin-top to make space for the notification */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+/* Ensure the container fits the viewport */
+.circulars-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    text-align: center;
+}
+
+/* Center the title in the middle of the page */
+.circulars-heading {
+    position: relative; /* Ensures proper layering */
+    font-size: 3rem; /* Matches earlier font size */
+    background: linear-gradient(135deg, #f9db63, #ff6f61); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem; /* Space between title and batch cards */
+    z-index: 1; /* Ensure it stays above the background */
+    text-transform: uppercase;
+}
+
+/* Adjust batch section placement */
+.batch-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 30px; /* Space between cards */
+    justify-content: center;
+    width: 100%; /* Ensure it stretches across the container */
+}
+
+.batch-card {
+    width: 250px;
+    height: 130px;
+    background: radial-gradient(circle, #ffae00, #ff6f61);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 184, 97, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.batch-card h2 {
+    font-size: 2rem; /* Increased font size to match the larger card */
+    color: #fff;
+    font-weight: 600;
+}
+
+.notification-alert {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+/* Updated Circulars content styling */
+.circulars-content {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #333333, #444444); /* Dark gradient background */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 90%; /* Ensure it fits within the screen */
+    max-height: 90%; /* Ensure it fits within the screen */
+    width: calc(100% - 100px); /* Slightly smaller than full width */
+    height: calc(100% - 100px); /* Slightly smaller than full height */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Scroll for overflow content */
+    display: none; /* Hidden by default */
+    z-index: 200; /* High z-index to overlay on everything else */
+    text-align: left;
+}
+
+/* Layered black backdrop behind dark gradient content */
+.circulars-content::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Slightly larger than the gradient container */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: #000; /* Default black background */
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* Batch section styling */
+.batch-card {
+    width: 250px;
+    height: 130px;
+    background: radial-gradient(circle, #ffae00, #ff6f61);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 184, 97, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.batch-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 184, 97, 0.7);
+}
+
+/* Ensure dropdown menu styles are consistent */
+.circular-category h3 {
+    font-size: 1.7rem;
+    color: #ff6f61;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.circular-list {
+    list-style: none;
+    padding: 0;
+    max-height: 250px; /* Limit height for dropdown lists */
+    overflow-y: auto; /* Scrollable if content exceeds limit */
+}
+
+.circular-list li {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.circular-list li:hover {
+    background: #555;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #f9db63;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff6f61;
+}
+
+/* Layered black backdrop behind emerald green content */
+.circulars-content::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: rgba(0, 0, 0, 0.95); /* Black backdrop */
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.batch-title {
+    font-size: 2rem;
+    color: #f9db63;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.circular-category {
+    margin-top: 20px;
+}
+
+.circular-category h3 {
+    font-size: 1.7rem;
+    color: #ff6f61;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.circular-list {
+    list-style: none;
+    padding: 0;
+}
+
+.circular-list li {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.circular-list li:hover {
+    background: #555;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #f9db63;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff6f61;
+}
+.unread {
+    font-weight: bold;
+    color: #ff0000;
+}

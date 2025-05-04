@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIRCULARS</title>
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="circulars.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scrolling Notification Bar positioned independently -->
+    <div class="notification-bar">
+        <p>Important updates available in the CIRCULARS section. Stay informed!</p>
+    </div>
+    <div class="circulars-container">
+        <h1 class="circulars-heading">CIRCULARS</h1>
+        <div class="batch-section">
+            <div class="batch-card" data-batch="2022" onclick="showCirculars(2022)">
+                <h2>2022 Batch <sup class="notification-alert">3</sup></h2>
+            </div>
+            <div class="batch-card" data-batch="2023" onclick="showCirculars(2023)">
+                <h2>2023 Batch <sup class="notification-alert">2</sup></h2>
+            </div>
+            <div class="batch-card" data-batch="2024" onclick="showCirculars(2024)">
+                <h2>2024 Batch <sup class="notification-alert">1</sup></h2>
+            </div>
+            <div class="batch-card" data-batch="2025" onclick="showCirculars(2025)">
+                <h2>2025 Batch <sup class="notification-alert">1</sup></h2>
+            </div>
+        </div>
+    </div>
+    
+        <div id="circulars-content" class="circulars-content">
+            <button class="close-btn" onclick="closeCirculars()">×</button>
+            <h2 class="batch-title"></h2>
+            <div class="circular-category">
+                <h3>Academics</h3>
+                <ul class="academic-list circular-list"></ul>
+            </div>
+            <div class="circular-category">
+                <h3>Miscellaneous</h3>
+                <ul class="miscellaneous-list circular-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="circulars.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+document.querySelectorAll('.team-member').forEach(function (member, index) {
+        const details = member.querySelector('.faculty-details');
+        const paragraph = details.querySelector('p');
+        const fullText = paragraph.getAttribute('data-fulltext');
+
+        member.addEventListener('mouseover', function () {
+            if (!paragraph.innerText) {
+                paragraph.innerText = fullText;
+            }
+
+            // Apply left or right positioning based on the index
+            if ((index + 1) % 3 === 0) { // Adjust for the rightmost members
+                details.classList.add('faculty-details-left');
+                details.classList.remove('faculty-details-right');
+            } else {
+                details.classList.remove('faculty-details-left');
+                details.classList.add('faculty-details-right');
+            }
+
+            details.style.visibility = 'visible';
+            details.style.opacity = '1';
+        });
+
+        member.addEventListener('mouseout', function () {
+            paragraph.innerText = ''; // Clear the text for typing effect
+            details.style.opacity = '0';
+            details.style.visibility = 'hidden';
+        });
+    });

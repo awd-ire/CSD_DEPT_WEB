@@ -1,0 +1,107 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: black; /* Set the primary background color */
+    color: white;
+    position: relative; /* Enable positioning for the background image */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 40px; /* Align with the top of the margin */
+    left: 40px; /* Align with the left of the margin */
+    right: 40px; /* Align with the right of the margin */
+    bottom: 40px; /* Align with the bottom of the margin */
+    margin: 10px; /* Match the desired margin space */
+    background: url('bg.jpg') center center / cover no-repeat; /* Cover the margin space */
+    opacity: 0.8; /* Optional: Adjust transparency */
+    z-index: -1; /* Ensure it appears below other elements */
+}
+
+/* Styling for the first page (formerly flashcard-container) */
+#first-page {
+    display: grid;
+    gap: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.flashcard {
+    background-color: #749edd;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard:hover {
+    transform: scale(1.05); /* Add a slight hover effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.flashcard img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the second page */
+#second-page {
+    display: flex; /* Flex layout for row alignment */
+    justify-content: center; /* Center-align the flashcards */
+    gap: 15px; /* Add spacing between flashcards */
+    flex-wrap: wrap; /* Allow wrapping for more than 4 flashcards */
+}
+
+#second-page .flashcard {
+    width: 120px; /* Adjust as needed */
+    height: 150px; /* Add height to ensure consistency */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensures no overflow of images */
+}
+
+#second-page .flashcard img {
+    width: 100%; /* Take up full width of the container */
+    height: 100%; /* Take up full height of the container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Optional: Keep corners rounded */
+    position: absolute; /* Image fills the entire card */
+    top: 0;
+    left: 0;
+}
+
+/* Styling for the third page */
+#third-page {
+    display: none; /* Initially hidden */
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 10px;
+}
+
+/* Styling for the fourth page */
+#fourth-page {
+    display: none; /* Initially hidden */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Styling for the fifth page */
+#fifth-page {
+    display: none; /* Initially hidden */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+}

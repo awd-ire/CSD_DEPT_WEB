@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,610&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Protest+Strike&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="header-box">
+        <img src="BGS.png" class="overlay-image" alt="Overlay Image">
+        <div class="nav-items">
+            <a href="#" id="homeLink">Home</a>
+            <a href="#">Circulars</a>
+            <a href="#">Notes</a>
+            
+            <!-- Dropdown for More -->
+            <div class="dropdown">
+                <a href="#" class="more-link">More<img src="Drop Down.png" class="more-icon" alt="More Icon"></a>
+                <div class="dropdown-content more-dropdown">
+                    <a href="#">Faculties</a>
+                    <a href="#">Achievements</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Admin Login</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown for Notifications -->
+            <div class="dropdown">
+                <img src="Notification.png" class="bell-icon" alt="Bell Icon">
+                <div class="dropdown-content notification-dropdown">
+                    <a href="#">Notification 1</a>
+                    <a href="#">Notification 2</a>
+                    <a href="#">Notification 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="background-section">
+        <video autoplay loop muted class="background-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <img src="CSD.png" class="overlay-image-design" alt="Overlay Image">
+        <img src="BGS logo.png" class="overlay-image-bgs" alt="Overlay Image">
+        <div class="curvy-text">
+            Computer Science & Design
+        </div>
+        <div class="typing-text" id="typingText"></div> 
+    </div>
+
+    <div class="image-section">
+        <!-- Circle card with image -->
+        <div class="circle-card">
+            <img src="BGS clg.webp" alt="Circle Image" class="circle-image">
+        </div>
+        <!-- Text Box Card -->
+        <div class="text-box-card" id="textBoxCard">
+            <p>This is a sliding text box card!</p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script> 
+</body>
+</html>

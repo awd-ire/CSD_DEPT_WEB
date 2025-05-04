@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Section</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body class="black-bg">
+    <section id="team">
+        <h2>Meet Our Faculty Members</h2>
+        <div class="team-container">
+
+            <!-- First Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/HOD MAM.jpg" alt="Dr. Madhu Patil">
+                    <div class="overlay">
+                        <h3>Dr. Madhu Patil</h3>
+                        <p>M.Tech, Ph.D<br>Professor & HOD</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Dr. Madhu Patil has over 20 years of teaching experience. She is an expert in multiple disciplines of engineering and has contributed to numerous publications in her field. Passionate about mentoring students and conducting research.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Second Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/CHANDRAKALA MAM.jpg" alt="Dr. Chandrakala H L">
+                    <div class="overlay">
+                        <h3>Dr. Chandrakala H L</h3>
+                        <p>M.Tech, Ph.D<br>Professor</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Dr. Chandrakala H L has 31 years of teaching experience. She is known for her vast expertise in technical education and her contributions to the development of innovative teaching methods.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Third Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/GEETHA MAM.jpg" alt="Mrs. Geetha G">
+                    <div class="overlay">
+                        <h3>Mrs. Geetha G</h3>
+                        <p>M.Tech<br>Assistant Professor</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Mrs. Geetha G has 5 years of teaching experience in engineering. Her research interests include machine learning and AI, and she has been actively involved in student projects and curriculum development.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fourth Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/AKSHATHA MAM.jpg" alt="Mrs. Akshatha Rao">
+                    <div class="overlay">
+                        <h3>Mrs. Akshatha Rao</h3>
+                        <p>M.Tech<br>Assistant Professor</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Mrs. Akshatha Rao, with 13 years of experience, specializes in advanced algorithms and data structures. She has been guiding students through their final-year projects and contributes actively to research.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fifth Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/SANJITHA MAM.jpg" alt="Mrs. Sanjitha S">
+                    <div class="overlay">
+                        <h3>Mrs. Sanjitha S</h3>
+                        <p>M.Tech<br>Assistant Professor</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Mrs. Sanjitha S is pursuing her Ph.D. and has 7 years of teaching experience. She is known for her innovative approaches to teaching software engineering and her dedication to research.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sixth Faculty Member -->
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="images/NAGARAJ SIR.jpg" alt="Mr. Nagaraj B">
+                    <div class="overlay">
+                        <h3>Mr. Nagaraj B</h3>
+                        <p>M.Tech<br>Assistant Professor</p>
+                    </div>
+                </div>
+                <div class="faculty-details">
+                    <p data-fulltext="Mr. Nagaraj B has 12 years of teaching experience in engineering. His areas of expertise include network security and cloud computing. He actively engages in mentoring students and developing research projects.">
+                    </p>
+                </div>
+            </div>
+
+            <!-- Seventh Faculty Member -->
+<div class="team-member">
+    <div class="image-container">
+        <img src="images/download.jpg" alt="Mrs. Ashalatha">
+        <div class="overlay">
+            <h3>Mrs. Ashalatha</h3>
+            <p>M.Tech<br>Assistant Professor</p>
+        </div>
+    </div>
+    <div class="faculty-details">
+        <p data-fulltext="Mrs. Ashalatha has 12 years of teaching experience in engineering. Her areas of expertise include network security and cloud computing. She actively engages in mentoring students and developing research projects.">
+        </p>
+    </div>
+</div>
+
+
+        </div>
+    </section>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
